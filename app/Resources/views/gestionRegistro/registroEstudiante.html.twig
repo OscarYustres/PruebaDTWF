@@ -1,0 +1,43 @@
+{# Plantilla de nuestra aplicacion #}
+{% extends 'base.html.twig' %}
+{% block title%}
+Registro estudiante
+{% endblock %}
+{% block body %}
+<!-- Page Content -->
+<div class="container">
+<!-- Page Content -->
+<div class="row">
+
+
+<div class="col-lg-8 mb-4">
+<h2 class="mt-4 mb-3">Nuevo Estudiante</h2>
+{{ form_start(form) }}
+{{ form_errors(form) }}
+<div class="control-group form-group">
+     {{ form_label(form.nombre) }}
+     {{ form_errors(form.nombre) }}
+     {{ form_widget(form.nombre) }}
+     </div>
+     <div class="control-group form-group">
+     {{ form_label(form.edad) }}
+     {{ form_errors(form.edad) }}
+     {{ form_widget(form.edad) }}
+     </div>
+     <div class="control-group form-group">
+     {{ form_label(form.grado) }}
+     {{ form_errors(form.grado) }}
+     {{ form_widget(form.grado) }}
+     </div>
+     <div>
+     <div class="control-group form-group">
+     {{ form_label(form.guardar) }}
+     {{ form_widget(form.guardar) }}
+     </div>
+ {{ form_end(form) }}
+ </div>
+ </div>
+ </div>
+ </div>
+
+{% endblock %}
